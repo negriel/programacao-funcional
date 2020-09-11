@@ -69,7 +69,7 @@ gera3 = [x | x <- lista, x >= 1 && x <= l1!!0] ++ [x | x <- lista, x >= 1 && x <
 -- d) gera4: gerar uma lista de duplas, onde cada dupla são 2 números consecutivos de 1 a 16, sendo o primeiro elemento ímpar (Ex: (1,2) e (3,4))
 
 gera4 :: [(Int, Int)]
-gera4 = [(x,x+1) | x <- lista, impar x]
+gera4 = [(x, x+1)| x <- [1..16], mod x 2 /= 0 ]
 
 -- e) gera5: a partir da lista de duplas geradas no item d, gerar a lista onde cada elemento corresponde à soma dos elementos da dupla.
 
