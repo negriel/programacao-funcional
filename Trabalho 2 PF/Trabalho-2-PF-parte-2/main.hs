@@ -122,8 +122,8 @@ troca (msg1 : msg2 : xs)
   | compara msg1 msg2 = msg2 : troca (msg1 : xs)
   | otherwise = msg1 : troca (msg2 : xs)
   where
-    compara (Registro (Nome _) _ _ _ _) (Registro (Fone _) _ _ _ _) = True -- Ocorre troca, fone vem primeiro
-    compara (Registro (Fone _) _ _ _ _) (Registro (Nome _) _ _ _ _) = False -- Não ocorre troca
+    compara (Registro (Nome _) _ _ _ _) (Registro (Fone _) _ _ _ _) = True 
+    compara (Registro (Fone _) _ _ _ _) (Registro (Nome _) _ _ _ _) = False 
     compara (Registro (Nome nome1) _ _ _ _) (Registro (Nome nome2) _ _ _ _) = nome1 > nome2
     compara (Registro (Fone nome1) _ _ _ _) (Registro (Fone nome2) _ _ _ _) = nome1 > nome2
 
